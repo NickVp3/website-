@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <script>
+        function agregarDatos(event) {
+            event.preventDefault(); // Evitar que el formulario se envíe y recargue la página
+
+            // Obtener los valores del formulario
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+
+            // Crear una nueva fila y celdas
+            const tabla = document.getElementById('tablaDatos');
+            const nuevaFila = tabla.insertRow();
+            const celdaNombre = nuevaFila.insertCell(0);
+            const celdaEmail = nuevaFila.insertCell(1);
+            const celdaTelefono = nuevaFila.insertCell(2);
+
+            // Asignar los valores a las celdas
+            celdaNombre.textContent = nombre;
+            celdaEmail.textContent = email;
+            celdaTelefono.textContent = telefono;
+
+            // Limpiar los campos del formulario
+            document.getElementById('nombre').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('telefono').value = '';
+        }
+    </script>
+</head>
+<body>
+    <h1>Bienvenidos a mi pagina</h1>
+
+    <p class="p_rojo">Bienvenidos a mi pagina web donde podras consultar la tabla de datos, a continuacion te dare una breve introduccion de como usar este tipo de informacion</p>
+    <p>Este es mi parrafo 2</p>
+    <p class="p_rojo">Este es mi parrafo 3</p>
+    <p>Este es mi parrafp 4 </p> 
+    
+    <h1 class="titulo cuenta">Titulo con ID</h1>
+
+    <h2>Formulario de Registro</h2>
+    <form onsubmit="agregarDatos(event)">
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" required>
+
+        <label for="email">Correo Electronico</label>
+        <input type="email" name="email" id="email" placeholder="Tu correo electronico" required>
+
+        <label for="telefono">Telefono</label>
+        <input type="text" name="telefono" id="telefono" placeholder="Tu telefono aqui" required>
+
+        <button type="submit">Registrar</button>
+    </form>
+    
+    <table id="tablaDatos">
+        <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Telefono</th>
+        </tr>
+        <tr>
+            <td>Juan Perez</td>
+            <td>Juan@gmail.com</td>
+            <td>3142024566</td>
+        </tr>
+        <tr>
+            <td>Carlos</td>
+            <td>Carlosp@gmail.com</td>
+            <td>3505989045</td>
+        </tr>
+        <tr>
+            <td>Carolina Rodriguez</td>
+            <td>crodriguez@gmail.com</td>
+            <td>3125903938</td>
+        </tr>
+    </table>
+</body>
+</html>
