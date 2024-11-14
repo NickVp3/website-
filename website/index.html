@@ -34,7 +34,16 @@
     </script>
 </head>
 <body>
-    <h1>Bienvenidos a mi pagina</h1>
+    <header>
+        <h1>Bienvenidos a mi pagina</h1>
+        <nav>
+            <ul>
+                <li><a href="#formulario">Formulario de Registro</a></li>
+                <li><a href="#tabla">Tabla de Datos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <p class="p_rojo">Bienvenidos a mi pagina web donde podras consultar la tabla de datos, a continuacion te dare una breve introduccion de como usar este tipo de informacion</p>
     <p>Este es mi parrafo 2</p>
@@ -43,7 +52,7 @@
     
     <h1 class="titulo cuenta">Titulo con ID</h1>
 
-    <h2>Formulario de Registro</h2>
+    <h2 id="formulario">Formulario de Registro</h2>
     <form onsubmit="agregarDatos(event)">
 
         <label for="nombre">Nombre:</label>
@@ -58,6 +67,7 @@
         <button type="submit">Registrar</button>
     </form>
     
+    <h2 id="tabla">Tabla de Datos</h2>
     <table id="tablaDatos">
         <tr>
             <th>Nombre</th>
@@ -80,5 +90,11 @@
             <td>3125903938</td>
         </tr>
     </table>
+
+    <footer>
+        <p>&copy; 2023 Mi Pagina Web. Todos los derechos reservados.</p>
+        <p>Contacto: <a href="mailto:info@mipagina.com">info@mipagina.com</a></p>
+        <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Twitter</a>, <a href="#">Instagram</a></p>
+    </footer>
 </body>
 </html>
