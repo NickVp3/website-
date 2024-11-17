@@ -7,26 +7,26 @@
     <title>Document</title>
     <script>
         function agregarDatos(event) {
-            event.preventDefault(); // Evitar que el formulario se envíe y recargue la página
+            event.preventDefault(); // Este método previene el comportamiento por defecto del evento
 
-            // Obtener los valores del formulario
+            // esta variable contiene el valor del input
             const nombre = document.getElementById('nombre').value;
             const email = document.getElementById('email').value;
             const telefono = document.getElementById('telefono').value;
 
-            // Crear una nueva fila y celdas
+            // Crear un objeto con los datos del formulario
             const tabla = document.getElementById('tablaDatos');
             const nuevaFila = tabla.insertRow();
             const celdaNombre = nuevaFila.insertCell(0);
             const celdaEmail = nuevaFila.insertCell(1);
             const celdaTelefono = nuevaFila.insertCell(2);
 
-            // Asignar los valores a las celdas
+            // esta seccion es para agregar los datos a las celdas
             celdaNombre.textContent = nombre;
             celdaEmail.textContent = email;
             celdaTelefono.textContent = telefono;
 
-            // Limpiar los campos del formulario
+            // esta seccion me permite limpiar los campos del formulario
             document.getElementById('nombre').value = '';
             document.getElementById('email').value = '';
             document.getElementById('telefono').value = '';
@@ -35,6 +35,7 @@
 </head>
 <body>
     <header>
+            
         <h1>Bienvenidos a mi pagina</h1>
         <nav>
             <ul>
